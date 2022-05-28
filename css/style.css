@@ -1,0 +1,166 @@
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Lexend Deca', sans-serif;
+  background: #F3F5F7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p, h2,h3,div {
+  margin: 0;
+  padding: 0 ;
+}
+
+.header {
+  background: linear-gradient(to bottom, #574aeb, #3ea1db);
+  padding: 48px 20px ;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22,5px;
+  margin-bottom: 41px;
+}
+
+.search-container {
+  position: relative;
+}
+
+#search {
+  box-sizing: border-box;
+  display: block;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 100%;
+  padding-left: 38px;
+  color: #fff;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  height: 18px;
+  width: 18px;
+}
+
+#search::placeholder {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
+
+section {
+  margin: 50px 20px;
+  max-width: 100%;
+}
+
+.card {
+  margin-bottom: 25px;
+  background: #fff;
+  padding: 16px;
+}
+
+.date {
+  display: block;
+  font-size: 14px;
+  line-height: 17,5px;
+  color: #717171;
+  margin-bottom: 27px;
+}
+
+.title {
+  color: #1a202c;
+  font-size: 18px;
+  line-height: 22,5px;
+  margin-bottom: 9px;
+}
+
+.paragraph {
+  color: #717171;
+  font-size: 14px;
+}
+
+.news-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.heart {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-image: url('https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+ }
+
+ @keyframes heart-burst {
+  from {background-position:left;}
+  to {background-position:right;}
+ }
+
+
+ .heart {
+  animation: heart-burst 1s infinity;
+}
+
+.heart:hover {
+
+ }
+
+ .heart-clicked {
+  background-position:right;
+ }
+
+.is_animating {
+  animation: heart-burst .8s steps(28) 1;
+}
+
+.underline{
+  position: relative;
+}
+
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-header {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  section {
+    margin: 100px;
+    max-width: 960px;
+  }
+}
